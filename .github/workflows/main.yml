@@ -36,10 +36,10 @@ jobs:
           sudo systemctl stop tomcat
 
           echo "Removing existing webapp directory"
-          sudo rm -rf /var/lib/tomcat8/webapps/Test.war
+          sudo rm -rf /var/lib/tomcat8/webapps/ROOT.war
 
           echo "Copying new war file to Tomcat webapps directory"
-          sudo cp target/Test.war /var/lib/tomcat8/webapps/
+          sudo cp target/ROOT.war /var/lib/tomcat8/webapps/
 
           echo "Starting Tomcat server"
           sudo systemctl start tomcat
